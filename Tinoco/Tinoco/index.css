@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button {
+    background-color: #549a36;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 45px;
+}
+
+.se {
+    border-radius: 5px;
+    border-color: #000000;
+    border-style: groove;
+    position: absolute;
+    right: 120px;
+}
+
+.su {
+    border-radius: 5px;
+    background-color: #bbbbbb;
+    position: relative;
+    left: 30px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.contenedor article .btn-abrir-popup {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5E7DE3;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.contenedor article .btn-abrir-popup:hover {
+    background: rgba(94, 125, 227, .9);
+}
+
+
+/* ------------------------- */
+
+
+/* POPUP */
+
+
+/* ------------------------- */
+
+.overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: #d9d9d9;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    text-align: center;
+    width: 700px;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+    line-height: 9px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #060606;
+}
+
+.btn-default1 .btn-cerrar-popup1 {
+    line-height: 9px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #060606;
+}
+
+.ti {
+    position: relative;
+    top: -160px;
+    right: 220px;
+}
+
+.file-btn {
+    border-bottom-color: #04de0b;
+    position: inherit;
+    right: 150px;
+}
+
+.image-btn {
+    font-size: 5%;
+    max-width: 200px;
+    max-height: 150px;
+    position: relative;
+    left: -220px;
+    top: 20px;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: rgb(255, 0, 0);
+}
+
+.form-autor {
+    width: 20px;
+}
+
+.popup h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup h4 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+    opacity: 0;
+}
+
+.input-group-btn1 {
+    width: 350px;
+}
+
+.input-group-btn3 {
+    position: relative;
+}
+
+textarea {
+    position: relative;
+    border-radius: 5px;
+    border-color: rgb(255, 254, 252);
+    width: 600px;
+}
+
+.textb {
+    position: relative;
+    right: 125px;
+}
+
+.textc {
+    position: relative;
+    right: -190px;
+    top: -55px;
+}
+
+.textd {
+    position: absolute;
+    top: 240px;
+    right: 310px;
+}
+
+.texte {
+    position: absolute;
+    top: 370px;
+    left: 55px;
+}
+
+.textf {
+    position: absolute;
+    top: 370px;
+    right: 113px;
+}
+
+.textg {
+    position: absolute;
+    top: 415px;
+    left: 55px;
+}
+
+.texth {
+    position: absolute;
+    top: 415px;
+    left: 480px;
+}
+
+.num {
+    position: relative;
+    width: 55px;
+    left: 272px;
+    top: -17px;
+    border-radius: 5px;
+    border-color: #cbcaca;
+}
+
+.num1 {
+    position: relative;
+    width: 110px;
+    left: 245px;
+    top: -30px;
+    border-radius: 5px;
+    border-color: #cbcaca;
+}
+
+.input-group-btn2 {
+    position: absolute;
+    width: 230px;
+    left: 420px;
+    top: 205px;
+}
+
+.controls {
+    position: relative;
+    width: 250px;
+    left: 95px;
+    top: 13px;
+}
+
+.controls1 {
+    position: relative;
+    width: 250px;
+    left: 75px;
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #dedede;
+}
+
+.btn-default {
+    position: absolute;
+    right: 450px;
+    top: 200px;
+    width: 170px;
+    height: 40px;
+    border-color: #cbcaca;
+    color: #f4f4f4;
+}
+
+.btn-default1 {
+    position: absolute;
+    right: 100px;
+    top: 200px;
+    width: 170px;
+    height: 40px;
+    border-color: #000000;
+    color: rgb(242, 242, 242);
+}
+
+.popup form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: #ffffff;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+    background: rgba(236, 236, 236, 0.9);
+}
+
+
+/* ------------------------- */
+
+
+/* ANIMACIONES */
+
+
+/* ------------------------- */
+
+.popup.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup.active h3 {
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active h4 {
+    animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+@keyframes entradaTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubtitulo {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

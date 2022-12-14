@@ -1,0 +1,541 @@
+/* Estilos del historial del lector*/
+
+table {
+    display: table;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    position: relative;
+    left: 50%;
+    top: 102%;
+    transform: translate(-38%, -52%);
+    border-collapse: collapse;
+    width: 895px;
+    /*height: 210px;*/
+    border: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+tr {
+    transition: all .2s ease-in;
+    cursor: pointer !important;
+}
+
+th,
+td {
+    padding: 1px;
+    text-align: left;
+    border-bottom: 1px solid #ddd !important;
+}
+
+#header {
+    background-color: #D2D79F !important;
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}
+
+::placeholder {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+/*Tabla Responsiva con scroll*/
+
+
+/*.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+    .table-responsive > .table > thead > tr > th,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+}*/
+
+
+/*Tabla Responsiva con corte*/
+
+
+/*@media screen and (max-width: 600px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table th {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}*/
+
+
+/*Botones*/
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s !important;
+}
+
+.button span:after {
+    content: '\00bb';
+    /* Entidades CSS. Para usar entidades HTML, use &#8594;*/
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s !important;
+}
+
+.button:hover span {
+    padding-right: 25px !important;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0 !important;
+}
+
+.button {
+    position: relative;
+    top: 10px;
+    right: -10px;
+}
+
+
+/*Buscar*/
+
+.form-control {
+    background-color: #a3bf42 !important;
+    width: auto !important;
+    height: 6vh !important;
+    color: #fff !important;
+    position: relative !important;
+    right: -5px !important;
+    left: 3%;
+    top: 20px;
+}
+
+
+/*Contenido tabla*/
+
+.sidebar {
+    position: relative !important;
+    right: 2% !important;
+}
+
+
+/*Codigo de ventana de jesus*/
+
+button {
+    position: relative;
+    top: -20px;
+    background: #A3BF42;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: #fff;
+    font-size: 14px;
+    padding: 10px 45px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    /*opacity: 0.9;*/
+}
+
+.contenedor .btn-abrir-popup {
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #a3bf42;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.contenedor article .btn-abrir-popup:hover {
+    background: rgba(94, 125, 227, .9);
+}
+
+
+/* ------------------------- */
+
+
+/* POPUP */
+
+
+/* ------------------------- */
+
+.overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    color: #000000;
+    padding: 50px;
+    text-align: center;
+    width: 700px;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+    position: relative;
+    top: -30px;
+    left: 30px;
+    line-height: 9px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #000000;
+}
+
+.btn-default1 .btn-cerrar-popup1 {
+    line-height: 9px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #060606;
+}
+
+.ti {
+    position: relative;
+    top: -160px;
+    right: 220px;
+}
+
+.file-btn {
+    border-bottom-color: #A3BF42;
+    position: inherit;
+    right: 150px;
+}
+
+.image-btn {
+    font-size: 5%;
+    max-width: 200px;
+    max-height: 150px;
+    position: relative;
+    left: -220px;
+    top: 20px;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: rgb(255, 0, 0);
+}
+
+.form-autor {
+    width: 20px;
+}
+
+.popup h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup h4 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+    opacity: 0;
+}
+
+.correosu {
+    top: 15px;
+    position: relative;
+    right: 230px;
+}
+
+.input-group-btn {
+    position: relative;
+    width: 350px;
+    height: 60px;
+    left: 30px;
+}
+
+.input-group-btn9 {
+    position: relative;
+    top: 35px;
+    left: 20px;
+}
+
+.input-group-btn1 {
+    position: relative;
+    width: 350px;
+    left: 20px;
+}
+
+.input-group-btn3 {
+    position: relative;
+}
+
+textarea {
+    position: relative;
+    border-radius: 5px;
+    border-color: rgb(255, 254, 252);
+    width: 600px;
+}
+
+.textb {
+    top: 20px;
+    position: relative;
+    right: 250px;
+    height: px;
+}
+
+.textc {
+    position: relative;
+    right: -190px;
+    top: -55px;
+}
+
+.textd {
+    position: absolute;
+    top: 270px;
+    right: 490px;
+}
+
+.texte {
+    position: absolute;
+    top: 400px;
+    left: 10px;
+}
+
+.textf {
+    position: absolute;
+    top: 370px;
+    right: 113px;
+}
+
+.textg {
+    position: relative;
+    top: 30px;
+    left: 55px;
+}
+
+.texth {
+    position: absolute;
+    top: 415px;
+    left: 480px;
+}
+
+.input-group-btn2 {
+    position: absolute;
+    width: 230px;
+    left: 420px;
+    top: 205px;
+}
+
+.controls {
+    position: relative;
+    width: 250px;
+    left: 30px;
+    top: 93px;
+}
+
+.controls1 {
+    position: relative;
+    width: 250px;
+    left: 390px;
+    top: -20px;
+}
+
+.Title-poup {
+    background: rgb(245, 248, 234);
+    height: 40px;
+    position: relative;
+    color: rgb(119, 119, 119);
+    top: -20px;
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #dedede;
+}
+
+.btn-default {
+    position: absolute;
+    right: 350px;
+    top: -10px;
+    width: 170px;
+    height: 40px;
+    border-color: #707070;
+    color: #000000;
+}
+
+.btn-default1 {
+    position: absolute;
+    right: 100px;
+    top: -10px;
+    width: 170px;
+    height: 40px;
+    border-color: #707070;
+    color: rgb(0, 0, 0);
+}
+
+.popup form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: #ffffff;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+    background: rgba(236, 236, 236, 0.9);
+}
+
+
+/* ------------------------- */
+
+
+/* ANIMACIONES */
+
+
+/* ------------------------- */
+
+.popup.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup.active h3 {
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup.active h4 {
+    animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+@keyframes entradaTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubtitulo {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:320px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0%;
+    }
+}

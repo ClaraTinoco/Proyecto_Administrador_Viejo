@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+	<!-- meta tags requeridos -->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<meta name="author" content="Universidad de Colima"/>
+	<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="Universidad de Colima"/>
+	<meta property="og:image" content="http://wayf.ucol.mx/ucol_mini.png"/>
+	<meta property="og:locale:alternate" content="es_ES" />
+	<meta property="og:site_name" content="Universidad de Colima" />
+	<link href="../css.css" rel="stylesheet" type="text/css">
+	<link href="../js.js" rel="stylesheet" type="text/js">
+		
+	<!-- Titulo principal -->
+	<title>Universidad de Colima</title>
+	<!-- link requeridos -->
+	<link href="http://wayf.ucol.mx/ucol_mini.png" rel="image_src" />
+	<link href="//www.ucol.mx/cms/img/favicon.ico" type="image/x-icon" rel="icon" />
+	<!-- jQuery -->
+	<script src="//www.ucol.mx/cms/beta/js/jquery.min.js"></script> 
+	<!-- Bootstrap y header & footer agregados -->
+	<link href="//www.ucol.mx/cms/headerfooterapp2.css?v=2" rel="stylesheet">
+	<link href="//www.ucol.mx/cms/beta/css/carrusel.css" rel="stylesheet">
+    <style>
+		.breadcrumb li {
+			font-size: 14px !important;
+		}
+		.page-breadcrumb a.btn-danger {
+			padding: 0 15px;
+			color: #fff !important;
+		}
+	</style>
+  </head>
+  <body>
+	<div id="estructura">
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-light bg-faded theme-primary pos-f-t">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-xs-12">
+					<button class="navbar-toggler hidden-md-up pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false">&#x2630;</button>			        <div class="collapse navbar-toggleable-sm" id="navbar-header">
+				        
+			            <a class="navbar-brand" id="logo" href="//www.ucol.mx/">Universidad de Colima</a>
+			            <span class="home-href"><a href="./"></a></span>
+    </nav> <!-- /navbar -->
+        <section class="page-breadcrumb"> 
+     <div class="container "> 
+     	<div id="path">
+	        	<ol class="breadcrumb">
+	            	<li>Usted está en:</li>
+	            <li><a href="/">Inicio</a></li>
+			</ol>
+        </div>
+        <div id="sesion">
+	        	<ol class="breadcrumb">
+	            	<li>Bienvenido(a):</li>
+	            <li class="user-name">xd</li>
+	            <li><a href="#">Salir</a></li>
+			</ol>
+        </div>
+     </div> <!--cierra path-->
+    </section>
+	<section class="page-header">
+        <div class="container">
+	        <h1 class="title-ucol">Agregar Libro</h1>
+	    </div><!--/ Cierra .container /-->
+    </section>
+    <nav class="nav-sistema">
+    		<button class="navbar-toggler hidden-md-up pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-header2" aria-controls="navbar-header2" aria-expanded="false">☰</button>
+		<div class="collapse navbar-toggleable-sm" id="navbar-header2">
+	        <ul id="navlist" class="nav navbar-primary navbar-nav pull-md-right">
+	            <li class="nav-item">
+	                            <!--[if lte IE 6]>
+	                        </td>
+	                    </tr>
+	                </table>
+	                </a><![endif]-->
+	            </li>
+	        </ul>
+	    </div>
+	</nav>
+    
+    
+    <div class="container c-principal">
+		<div class="row p-contenido">
+			<div class="col-xl-3 col-lg-4 col-md-4 col-xs-12 sidebar">
+				<!--Izquierda-->
+			</div>
+			<!-- <div class="col-xl-9 col-lg-8 col-md-8 col-xs-12 main"> <--Con  contenido izquierdo o derecho uno de los dos
+			<div class="col-xl-12 col-lg-12 col-md-12 col-xs-12 main"> <--Pagina completa --> 
+			<div class="col-xl-6 col-lg-4 col-md-4 col-xs-12 main"><!--Con contenido izquierdo y derecho -->
+				<form name="fomr" action="agregarRespon" method="post">
+                    Correo Universitario: <input type="search" name="buscacorreo" placeholder="Buscar...">
+                    <input type="submit" value="Buscar"><p><br>
+                    No.trabajador:<input type="text" name="trabajador" required><p>
+                    
+                    Correo universitario:<input type="text" name="correo" required><p>
+                    
+                    Nombre Completo:<input type="text" name="nombre" required><p>
+					
+                    Campus:
+						<select name="campus" id="campus"><p>
+							<option value="central">Central</option>
+							<option value="vdea">Villa de Alvarez</option>
+							<option value="coqui">Coquimatlan</option>
+							<option value="tecoman">Tecoman</option>
+							<option value="manza">Manzanillo</option>
+							<option value="armeria">Armeria</option>
+							<option value="ixtla">Ixtlahuacan</option>
+							<option value="comala">Erlang</option>
+						  </select><p>
+                    Perfil:
+						<select name="perfil" id="perfil"><p>
+							<option value="responsable">Responsable</option>
+							<option value="administrador">Administrador</option>
+						</select><p>
+					</form>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-4 col-xs-12 sidebar">
+				<!--Derecha -->
+			</div>
+		</div>
+		<div class="row p-inferior">
+			<div class="col-md-12 p-content"></div>
+		</div>
+	</div>
+
+   </div>
+    <footer class="bd-footer text-muted" role="contentinfo">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12 center-links">
+				    <img src="//www.ucol.mx/cms/beta/img/icon/ubicacion.svg" width="20"> Direcci&oacute;n: Av. Universidad No. 333, Las V&iacute;boras; CP 28040 Colima, Colima, M&eacute;xico
+			    </div>
+			    <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12 center-links">
+				    &copy; Derechos Reservados 2022-2025 Universidad de Colima
+			    </div>
+		    </div>
+	    </div>
+	</footer>
+  </body>
+</html>

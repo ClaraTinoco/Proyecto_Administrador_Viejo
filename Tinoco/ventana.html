@@ -1,0 +1,73 @@
+<link href="../css.css" rel="stylesheet" type="text/css">
+<script href="../js.js" rel="stylesheet" type="text/js"></script>>
+<button id="btn-abrir-popup" class="btn-abrir-popup">+ Agregar libro</button>
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">X</a>
+
+            <div class="list-group">
+                <a class="list-group-item3 active" href="#"><strong aligh="Right">Agregar/Editar Libro</strong></a>
+                <div class="list-group-item">
+                    <input class="file-btn" type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple />
+                </div>
+                TÍTULO:
+                <div class="input-group-btn">
+                    <input type="text" name="b_titulo" placeholder="Título del Libro" class="form-control">
+                    <!--CAMPO TITULO-->
+                    <span class="badge"></span>
+                </div>
+                <div class="textb"> AUTOR:</div>
+                <div class=" input-group-btn1 ">
+                    <input type="text " name="b_autor " placeholder="Nombre del Autor(es) " class="form-control ">
+                    <!--CAMPO NOMBRE DE AUTOR-->
+                    <span class="badge "></span>
+                </div>
+                <div class="textc"> EDITORIAL:
+                </div>
+                <div class="input-group-btn2 ">
+                    <input type="text " name="b_autor " placeholder="Nombre del Autor(es) " class="form-control ">
+                    <!--CAMPO NOMBRE DE AUTOR-->
+                    <span class="badge "></span>
+                </div>
+                <div class="textd"> RESUMEN:</div>
+                <div class="input-group-btn">
+                    <textarea rows="4" cols="25"></textarea>
+                    <span class="badge "></span>
+                </div>
+                <div class="texte"> CATEGORIA:</div>
+                <div class="controls">
+                    <select class="form-control " name="b_idioma "><option value=" ">Seleccione</option><option value="es ">Español</option><option value="fr ">Francés</option><option value="en
+                        ">Inglés</option><option value="IngEsp ">Inglés y Español</option></select>
+                </div>
+                <div class="textf"> EXISTENCIA:</div>
+                <input type="number" name="edad" class="num">
+                <!--CAMPO ISBN-->
+                <div class="input-group-btn ">
+                </div>
+                <div class="textg"> CAMPUS:</div>
+                <div class="controls1">
+                    <select class="form-control " name="b_formato "><option value=" ">Seleccione</option><option value="digital ">Digital</option><option value="digImpreso ">Digital e impreso</option><option value="impreso ">Impreso</option></select>
+                </div>
+                <div class="texth"> FECHA:</div>
+                <input type="date" name="edad" class="num1">
+            </div>
+        </div>
+        <a class="list-group-item3 active ">
+            <div class="row clearfix ">
+                <div align="center " class="col-md-12 column ">
+                    <button class="btn-default" type="submit "></span> GUARDAR</button>
+                    <!--BUSQUEDA-->
+                </div>
+            </div>
+        </a>
+        <a class="list-group-item3 active ">
+            <div class="row clearfix ">
+                <div align="center " class="col-md-12 column ">
+
+                    <button class="btn-default1" type="submit " id="btn-cerrar-popup1" class="btn-cerrar-popup1"></span> CANCELAR</button>
+                    <!--BUSQUEDA-->
+                </div>
+            </div>
+        </a>
+    </div>
+    </form>

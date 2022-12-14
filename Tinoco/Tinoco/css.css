@@ -1,0 +1,492 @@
+/* Estilos del historial del lector*/
+
+
+/*table {
+    display: table;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    position: relative;
+    left: 50%;
+    top: 102%;
+    transform: translate(-38%, -52%);
+    border-collapse: collapse;
+    width: 895px;
+    /*height: 210px;
+
+border: 1px solid #d4d4d4;
+box-sizing: border-box;
+box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2),
+-1px -1px 8px rgba(0, 0, 0, 0.2) !important;
+
+}
+tr {
+    transition: all .2s ease-in;
+    cursor: pointer !important;
+}
+th,
+td {
+    padding: 1px;
+    text-align: left;
+    border-bottom: 1px solid #ddd !important;
+}
+#header {
+    background-color: #D2D79F !important;
+    color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}
+::placeholder {
+    color: rgb(255, 255, 255) !important;
+}
+
+/*Tabla Responsiva con scroll*/
+
+
+/*.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+    .table-responsive > .table > thead > tr > th,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+}*/
+
+
+/*Tabla Responsiva con corte*/
+
+
+/*@media screen and (max-width: 600px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table th {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}*/
+
+
+/*Botones*/
+
+
+/*.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s !important;
+}*/
+
+
+/*.button span:after {
+    content: '\00bb';
+    /* Entidades CSS. Para usar entidades HTML, use &#8594;
+
+position: relative;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s !important;
+
+}
+*/
+
+
+/*
+.button:hover span {
+    padding-right: 25px !important;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0 !important;
+}
+
+.button {
+    position: relative;
+    top: 10px;
+    right: -10px;
+}*/
+
+
+/*Buscar*/
+
+
+/*Contenido tabla*/
+
+
+/*.sidebar {
+    position: relative !important;
+    right: 2% !important;
+}*/
+
+
+/*Codigo de ventana de jesus*/
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.contenedor article {
+    line-height: 28px;
+}
+
+.contenedor article h1 {
+    font-size: 30px;
+    text-align: left;
+    padding: 50px 0;
+}
+
+.contenedor article p {
+    margin-bottom: 20px;
+}
+
+.contenedor article .btn-abrir-popup {
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+    left: 65%;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: #C8D98E;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.contenedor article .btn-abrir-popup:hover {
+    background: #9cad61;
+}
+
+
+/* ------------------------- */
+
+
+/* POPUP */
+
+
+/* ------------------------- */
+
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    position: relative;
+    background: rgb(230, 230, 230);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    top: 4%;
+    text-align: center;
+    width: 800px;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #000;
+}
+
+.popup h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup h4 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #79a52e;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+    background: rgba(155, 186, 54, 0.9);
+}
+
+
+/* Edición del popup */
+
+.controls {
+    width: 100%;
+}
+
+#date {
+    max-height: 35px;
+}
+
+
+/* ------------------------- */
+
+
+/* ANIMACIONES */
+
+
+/* ------------------------- */
+
+.popup.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup.active h3 {
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+@keyframes entradaTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width:320px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0%;
+    }
+}
+
+
+/*Tabla */
+
+table {
+    position: relative;
+    width: 1250px;
+    background: #afd33b57;
+    margin-bottom: 1.25em;
+    border: solid 1px #dddddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+    top: 290px;
+    right: 265%;
+}
+
+table tr th,
+table tr td {
+    padding: 0.5625em 0.625em;
+    font-size: 0.875em;
+    color: #222222;
+    border: 2px solid #cdcdcd;
+}
+
+table tr.even,
+table tr.alt,
+table tr:nth-of-type(even) {
+    background: #edebeb;
+}
+
+#img {
+    max-width: 70px;
+    max-height: 80px;
+}
+
+
+/*Medidas de cada casilla */
+
+.N {
+    width: 10px;
+}
+
+.Portad {
+    width: 6%;
+}
+
+.Titulo {
+    width: 12%;
+}
+
+.Autor {
+    width: 12%;
+}
+
+.Editorial {
+    width: 12%;
+}
+
+.Existencia {
+    width: 6%;
+}
+
+.Estatus {
+    width: 7%;
+}
+
+.Campus {
+    width: 10%;
+}
+
+.Acciones {
+    width: 9%;
+}
+
+.Edit {
+    padding: 0 10px;
+    margin-bottom: 7px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: #C8D98E;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.Delete {
+    padding: 0 10px;
+    margin-bottom: 7px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: #C8D98E;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.Inter {
+    padding: 0 10px;
+    margin-bottom: 7px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: #C8D98E;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.Edit:hover {
+    background: rgba(155, 186, 54, 0.9);
+}
+
+.Delete:hover {
+    background: rgba(155, 186, 54, 0.9);
+}
+
+.Inter:hover {
+    background: rgba(155, 186, 54, 0.9);
+}
